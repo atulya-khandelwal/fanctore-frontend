@@ -110,7 +110,7 @@ const ShopContextProvider = (props) => {
 
     const getProductsData = async () => {
         try {
-
+            console.log("Backend URL:", backendUrl);
             const response = await axios.get(backendUrl + '/api/product/list')
             if (response.data.success) {
                 setProducts(response.data.products.reverse())
